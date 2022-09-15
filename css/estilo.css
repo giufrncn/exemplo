@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: normal;
+}
+body{
+    background-color: antiquewhite;
+    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Roboto Mono', monospace;
+    padding: 10px;
+    color: black;
+}
+.container {  
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr 1fr;
+  grid-template-rows: 0.1fr 1.9fr 0.3fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header header header"
+    "proyectos galeria1 galeria2"
+    "proyectos footer footer";
+}
+
+.containerviews {  
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr 1fr;
+  grid-template-rows: 0.1fr 2.6fr 0.3fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header header header"
+    "proyectos galeria3 galeria3"
+    "proyectos footer footer";
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  color: orangered;
+}
+.header { 
+  grid-area: header;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2rem;
+  padding-right: 2rem;
+}
+.proyectos { 
+  grid-area: proyectos; 
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+.proyectos a{
+  padding: 0.3rem;
+}
+
+.galeria1 { 
+  grid-area: galeria1; 
+  padding-top: 2.5rem;
+  padding-right: 0.5rem;
+}
+
+.galeria1 img {
+  width: 600px;
+  height: auto;
+}
+
+.galeria2 { 
+  grid-area: galeria2; 
+  padding-top: 2.5rem;
+}
+
+.galeria3 { 
+  grid-area: galeria3; 
+}
+
+.galeria3 img {
+  width: 900px;
+  height: auto;
+  padding-top: 2.2rem;
+}
+
+.galeria2 img {
+  width: 300px;
+  height: auto;
+}
+.galeria2 img:hover{
+  transform: scale(1.8,1.8);
+}
+
+.footer { 
+  grid-area: footer; 
+  padding-top: 2.2rem;
+}
+
+@media (max-width: 768px) {
+  .container {  
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr 1fr;
+    grid-template-rows: 0.1fr 1fr 0.3fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "header header header"
+      "proyectos galeria1 galeria2"
+      "proyectos footer footer";
+  }
+  .galeria1 img {
+    width: 400px;
+    height: auto;
+  }
+  .galeria2 img {
+    width: 150px;
+    height: auto;
+  }
+}
+@media (max-width: 420px) {
+  .container {  
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-rows: auto;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "header"
+      "proyectos"
+      "galeria1" 
+      "galeria2"
+      "footer";
+  }
+  .galeria1 img {
+    width: 300px;
+    height: auto;
+  }
+  .galeria2 img {
+    width: 300px;
+    height: auto;
+  }
+  .proyectos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .proyectos a{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: small;
+    padding-right: 8px;
+  }
+  menu{
+    display: flex;
+    justify-content: space-between;
+  }
+  nav .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+
+
+
